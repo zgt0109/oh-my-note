@@ -1,27 +1,5 @@
-#### Gem安装源替换
-  gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/ -v
-  bundle config mirror.https://rubygems.org https://gems.ruby-china.org
-#### 产生安全密钥
-`**终端运行**`
-
-  rake(rails) secret RAILS_ENV=production
-
-  echo $SECRET_KEY_BASE
-
-If you're on a normal Ubuntu machine just put export SECRET_KEY_BASE=" <<< output from rake secret here >>> " in your `~/.bashrc`.
-
-Run `source ~/.bashrc` and restart the app.
-#### Mysql 密码修改
-  mysql -u root
-
-  mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
-
-#### Rails template 引用(github上的code row Url)
-  rails app:template LOCATION=https://raw.githubusercontent.com/guxiaobai/oh-my-rails/master/capistrano.rb
-
 #### 使用Homebrew安装docker
 `docker--1.12.1.121332.dmg`
-
    执行 brew --cache
    得到/Users/zgt/Library/Caches/Homebrew
    ll 查看  进入到 /Cask  目录  run open ./  打开当前目录 并将docker.dmg文件拷贝进去
