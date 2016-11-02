@@ -10,3 +10,6 @@ Run `source ~/.bashrc` and restart the app.
 
 #### Rails template 引用(github上的code row Url)
   rails app:template LOCATION=https://raw.githubusercontent.com/guxiaobai/oh-my-rails/master/capistrano.rb
+
+#### AssetsPipeline预编译命令
+  rake(rails) assets:precompile RAILS_ENV=production
