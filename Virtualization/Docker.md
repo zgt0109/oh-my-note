@@ -1,9 +1,9 @@
 #### 使用Homebrew安装docker
 `docker--1.12.1.121332.dmg`
-   执行 brew --cache
-   得到/Users/zgt/Library/Caches/Homebrew
-   ll 查看  进入到 /Cask  目录  run open ./  打开当前目录 并将docker.dmg文件拷贝进去
-   run brew cask install docker
+   ~~执行 brew --cache~~
+   ~~得到/Users/zgt/Library/Caches/Homebrew~~
+   ~~ll 查看  进入到 /Cask  目录  run open ./  打开当前目录 并将docker.dmg文件拷贝进去~~
+  brew cask install docker
 #### 替换docker安装源
   https://ep1dz7wh.mirror.aliyuncs.com
 
