@@ -1,11 +1,7 @@
 #### 使用Homebrew安装docker
-`docker--1.12.1.121332.dmg`
-   ~~执行 brew --cache~~
-   ~~得到/Users/zgt/Library/Caches/Homebrew~~
-   ~~ll 查看  进入到 /Cask  目录  run open ./  打开当前目录 并将docker.dmg文件拷贝进去~~
-  brew cask install docker
+    brew cask install docker
 #### 替换docker安装源
-  https://ep1dz7wh.mirror.aliyuncs.com
+    https://ep1dz7wh.mirror.aliyuncs.com
 
 #### docker基本命令
 * docker pull mysql 下载 mysql 镜像
@@ -17,6 +13,8 @@
 * exit 退出并关闭虚拟机
 * docker exec -it 8f592ce3fcf4 bash 重新进入刚刚关闭的虚拟机
 * docker ps -a 再次查看虚拟机的运行状态（发现上一个并未关闭 是Up）
+* docker start xxx 重新打开关闭的容器
+* docker attach xxx 进入刚刚打开的容器
 * docker stop 8f592ce3fcf4 关闭刚刚的虚拟机
 * docker commit 8f592ce3fcf4 zgt:v1 创建一个名为zgt:v1的镜像
 * docker images 可以查看刚刚创建的镜像
