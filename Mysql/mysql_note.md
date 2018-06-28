@@ -10,24 +10,10 @@
 
 #### 进入mysql并创建数据库
   - mysql -uroot -p
-
-        * 解决mysql 不能在deploy用户下面以root账号登陆的问题：
-        sudo su root
-
-        mysql -uroot -p
-        use mysql;
-        select user,host,plugin from mysql.user;
-        update user set plugin="mysql_native_password" where user = 'root';
-        flush privileges;
-        exit;
-
-        mysql> USE mysql;
-
   - create database if not exists thrive default charset utf8;
   - show databases;
-  - use thrive;
-  - show tables;
-  - desc <table_name>;
+  - use thrive; (使用thrive数据库)
+  - show tables;(查看所有的表)
 
 ### 创建数据表并指定表的编码格式
     create table if not exists `books` (
@@ -46,6 +32,11 @@
     `created_at` datetime not null,
      PRIMARY KEY (`id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+    查看表的结构
+    desc books;
+    desc users;
+    desc <table_name>;
 
 ### books表中加入外键（外键默认自带索引）
     alter table books add user_id bigint(20);
@@ -124,4 +115,14 @@
     use mysql;
     SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
     flush privileges;
+    exit;
+
+### 解决mysql 不能在deploy用户下面以root账号登陆的问题：
+    sudo su root
+
+    mysql -uroot -p
+    use mysql; (使用mysql权限数据库)
+    select user,host,plugin from mysql.user;
+    update user set plugin="mysql_native_password" where user = 'root';
+    flush privileges; (刷新mysql权限)
     exit;
