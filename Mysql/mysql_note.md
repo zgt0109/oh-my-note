@@ -94,8 +94,9 @@
     select * from books order by name desc; 降序排列
 
 ### group by 分组数据 (having 接条件，并且只能在group中使用)
-    select * from books group by name order by id desc;
-    select * from books group by name having price > 50.0 order by id desc;
+    select name from books group by name order by name desc;
+    select id,name from books group by id,name order by id desc;
+    select id,name,price from books group by id,name,price having price > 50.0  order by id desc;
 
 ### 删除索引，表,数据库 以及清空表数据
     ALTER TABLE <table_name> DROP INDEX <index_name>;
