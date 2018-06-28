@@ -47,14 +47,14 @@
      PRIMARY KEY (`id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-### books表中加入外键
+### books表中加入外键（外键默认自带索引）
     alter table books add user_id bigint(20);
     alter table books add constraint user_id foreign key(user_id) references users(id);
 
     alter table <表名> add constraint <外键名> foreign key<字段名> REFERENCES <外表表名><字段名>;
 
-### books表中加入索引
-    alter table books add index index_books_on_user_id (name(20));
+### 给books表 name列加上索引
+    alter table books add index index_books_on_name (name(20));
 
 ### insert into
     INSERT INTO `users` VALUES (1,'zgt','13162796586','2018-06-19 01:58:16');
@@ -72,9 +72,36 @@
 ### select 
     select * from books;
     select * from books where id=1;
+    select * from books where id in (1,2,3);
+    select * from books where id between 1 and 3;
+    select * from books where user_id is null;
+    select * from books where user_id is not null;
+
+    select * from users where id =1 and phone="13162796586";
+    select * from users where id =1 or phone="13162796586";
+
+### like模糊查询
+    select * from books where name like "%教程%";
+    select * from books where name like "%教程";
+    select * from books where name like "_教程";
+
+### join连接表查询
 
     select t1.name,t1.price,t2.name,t2.phone from books as t1 left join users as t2 on t1.user_id = t2.id;
 
+### order by 排序(默认升序排列)
+    select * from books order by name (asc);
+    select * from books order by name desc; 降序排列
+
+### group by 分组数据 (having 接条件，并且只能在group中使用)
+    select * from books group by name order by id desc;
+    select * from books group by name having price > 50.0 order by id desc;
+
+### 删除索引，表,数据库 以及清空表数据
+    ALTER TABLE <table_name> DROP INDEX <index_name>;
+    DROP TABLE <table_name>;
+    DROP DATABASE <database_name>;
+    TRUNCATE TABLE <table_name>;
 
 ### mysqldump 备份数据库
 
