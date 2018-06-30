@@ -126,3 +126,18 @@
     update user set plugin="mysql_native_password" where user = 'root';
     flush privileges; (刷新mysql权限)
     exit;
+
+
+### 数据库
+sqlite
+```
+apt-get -yq install sqlite3 libsqlite3-dev
+```
+
+mysql
+```
+apt-get -yq install mysql-server mysql-client libmysqlclient-dev
+
+# 解决 Ubuntu 16.04 上不能直接用 root 用户登录
+mysql -uroot -p -e "update mysql.user set plugin='mysql_native_password' WHERE User='root'; FLUSH PRIVILEGES;"
+```
