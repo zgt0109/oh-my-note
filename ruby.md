@@ -1,9 +1,9 @@
 ###  	Ruby 基础
 > 知识要点
 
-- rbenv的安装
+- rbenv的安装(ruby的版本管理器)
 - ruby的安装
-- gem 和bundle的介绍和使用
+- gem(ruby的包管理器)和bundle的介绍和使用
 - irb的使用
 - ruby-china 社区
 
@@ -28,17 +28,16 @@ deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-security main multiverse res
 deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main multiverse restricted universe
 EOD
 ```
-		
+更新安装源
+
+apt-get update
 		
 
 > 安装ubuntu系统的一些编译依赖
 
-```
-apt-get install -yq build-essential language-pack-zh-hans
-
-apt-get -yq install autoconf bison build-essential libssl-dev libyaml-dev \
-                    libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev \
-                    libgdbm3 libgdbm-dev
+[参考地址](https://github.com/rbenv/ruby-build/wiki) 
+```                   
+apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev language-pack-zh-hans
 ```
 
 > Rbenv 安装
