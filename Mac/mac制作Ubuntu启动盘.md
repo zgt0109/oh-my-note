@@ -18,3 +18,6 @@
     sudo diskutil umountDisk /dev/disk2
     diskutil list
     列出资盘，并查看/dev/disk2的大小
+
+> MacOS 磁盘管理工具 diskutil 介绍
+- [MacOS 磁盘管理工具 diskutil 介绍](https://www.jianshu.com/p/6a1f365617ad)
