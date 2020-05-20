@@ -45,3 +45,7 @@ RUN gem install rails -v 5.0.0.1
 * docker run -it -v ~/Documents:/apple rails:v3 bash
 * 进入虚拟机 ll  并进入/apple
 * 就会在 实体机的~/Documents 操作
+
+
+
+https://40313q4b.mirror.aliyuncs.com

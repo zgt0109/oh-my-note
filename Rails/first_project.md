@@ -8,10 +8,12 @@
 
 
 #### Add Semantic Gem
+```
   gem 'semantic-ui-sass', '~> 2.2', '>= 2.2.4.0'
   @import 'semantic-ui';
   //= require semantic-ui
   class: "ui button primary"
+```
 
 #### Add Annotate Gem
   gem 'annotate', '~> 2.7', '>= 2.7.1'
