@@ -1,0 +1,16 @@
+user.name=zouguotao
+user.email=2506526350@qq.com
+push.default=simple
+alias.co=checkout
+alias.br=branch
+alias.ci=commit
+alias.st=status
+alias.ps=push
+alias.pl=pull
+alias.df=diff
+alias.cp=cherry-pick
+core.editor=vi
+color.ui=true
+color.status=auto
+color.branch=auto
+merge.tool=vimdiff
