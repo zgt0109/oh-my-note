@@ -40,9 +40,18 @@
 * `vagrant box remove`: 移除加载的box
 * `vagrant init` : 初始化虚拟机，并产生Vagrantfile文件
 * `vagrant up` :启动虚拟机
+* `vagrant provision` :安装相关软件
 * `vagrant ssh`: 进入虚拟机
 * `vagrant halt` : 关闭虚拟机
 * `vagrant reload` : 重启虚拟机
 * `vagrant status` : 查看虚拟机的运行状态
 * `vagrant destroy` : 销毁虚拟机
 * `vagrant package` :打包虚拟机
+
+
+<!-- 例子展示 -->
+- vagrant box add ubuntu/xenial32 ../xenial-server-cloudimg-i386-vagrant.box
+- vagrant up
+- vagrant provision
+- vagrant ssh
+- vagrant halt
